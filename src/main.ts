@@ -53,4 +53,4 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
 
 
 
-// client.login(token)
+client.login(token)

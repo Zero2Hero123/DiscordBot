@@ -16,8 +16,7 @@ exports.default = {
         .setDescription('test'),
     execute(interaction) {
         return __awaiter(this, void 0, void 0, function* () {
-            var _a;
-            yield ((_a = interaction.channel) === null || _a === void 0 ? void 0 : _a.send('pong'));
+            yield interaction.reply('ping');
         });
     }
 };
