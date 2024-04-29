@@ -12,7 +12,7 @@ const token: string = process.env.TOKEN!
 const client = new Client({ intents: [GatewayIntentBits.Guilds] })
 
 // TYPES
-type Command = {
+export type Command = {
     data: SlashCommandBuilder
     execute: (interaction: ChatInputCommandInteraction) => Promise<void>
 }

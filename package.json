@@ -5,7 +5,8 @@
   "main": "./dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc && node ."
+    "dev": "tsc && node .",
+    "deploy": "tsc && node ./dist/deploy.js"
   },
   "keywords": [],
   "author": "",
