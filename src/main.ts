@@ -36,7 +36,7 @@ client.once(Events.ClientReady, client => {
 client.on(Events.InteractionCreate, async (interaction: Interaction) => {
     if(!interaction.isChatInputCommand()) return;
 
-    const command = commands.get(interaction.command?.name!)
+    const command = commands.get(interaction.commandName)
     
     if(!command){
         console.warn(`Command ${interaction.command?.name} does not exist.`)

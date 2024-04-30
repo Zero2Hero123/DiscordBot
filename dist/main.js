@@ -34,12 +34,12 @@ client.once(discord_js_1.Events.ClientReady, client => {
 });
 // command handler
 client.on(discord_js_1.Events.InteractionCreate, (interaction) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a, _b;
+    var _a;
     if (!interaction.isChatInputCommand())
         return;
-    const command = commands.get((_a = interaction.command) === null || _a === void 0 ? void 0 : _a.name);
+    const command = commands.get(interaction.commandName);
     if (!command) {
-        console.warn(`Command ${(_b = interaction.command) === null || _b === void 0 ? void 0 : _b.name} does not exist.`);
+        console.warn(`Command ${(_a = interaction.command) === null || _a === void 0 ? void 0 : _a.name} does not exist.`);
         return;
     }
     try {

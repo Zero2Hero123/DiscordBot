@@ -32,7 +32,7 @@ const rest = new discord_js_1.REST().setToken(token);
     try {
         console.log(`Started refreshing ${commands.length} application (/) commands.`);
         // The put method is used to fully refresh all commands in the guild with the current set
-        const data = yield rest.put(discord_js_1.Routes.applicationCommands(clientId), { body: commandsAsJson });
+        const data = yield rest.put(discord_js_1.Routes.applicationGuildCommands(clientId, '958376849430433882'), { body: commandsAsJson });
         console.log(`Successfully reloaded ${data.length} application (/) commands.`);
     }
     catch (error) {
